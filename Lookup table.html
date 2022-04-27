@@ -13,7 +13,6 @@
 <link rel="stylesheet" href="./style.css">
 </head>
 <style>
-
 body
 {
 	background-color:#b0c4de;
@@ -28,45 +27,65 @@ body
    color: white;
    text-align: center;
 }
+ <script src="./myScript.js"></script>
+
 </style>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-        
+<script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var num=document.myform.num.value;
+  var email=document.myform.email.value;
+var message=document.myform.message.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}
+ else if(num.length<11){  
+  alert("PhoneNumber must be at least 11 characters long.");
+  return false;  
+  }
+  
+else if(email==null || email==""){  
+  alert("email can't be blank");  
+  return false;
+ }
+else if(message==null || message==""){  alert("message can't be blank");  
+  return false;  
+  }
+  if (isNaN(num)){
+   alert("Enter Numeric value only");
+  return false;
+}else{
+  return true;
+  }
+}
+</script>  
     </head>
     <body>
-        <form name="login">
-            <center>
-            <div>
+        
             <h2>
                    Please enter details
             </h2>
           
-<form action="/action_page.php">
-  <label for="Name">Name:</label><br>
-  <input type="text" id="name" name="name" value="Please enter a nickname"><br>
-  <label for="Address">Address:</label><br>
-  <input type="text" id="Address="Address" value="Please enter your address"><br>
-<label for="E-mail">E-mail:</label><br>
-  <input type="text" id="E-mail="E-mail" value="Please enter your E-mail"><br>
-<label for="Number">Number:</label><br>
-  <input type="text" id="Number"="Number" value="Please enter your Number"><br>
-<br>
-  <input type="submit" value="Submit">
-</form> 
+<form name="myform" method="post" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return validateform()" >  
+Name: <input type="text" name="name"><br/>  
+Number: <input type="text" name="num"><br/>  
+E-mail: <input type="text" name="email"><br/>  
+Messsage: <input type="text" name="message"><br/>  
+<input type="submit" value="register"> 
+</form>
 <p>Contact us<p>
 <p>0584-88154866 (fax)
 <p>QQ consulting group :548991989 
 <p>Address: No. 9 xuefu Road, Higher Education Park, Ningbo city
 <p>E-mail: sdg813@fft.cn
 <p>Zip: 123456
- </body>
+    </body>
 
 <center>
 <a href="https://zs.nbcc.cn/danye/79.shtml">
-<img border="0" src="120.jpg" alt="HTML 教程" width="900" height="800"></a></center>
+<img border="0" src="120.jpg" alt="HTML 00" width="900" height="800"></a></center>
 <div class="Footer">
   <p>Chen Jiu Joey</p>
 </div>
